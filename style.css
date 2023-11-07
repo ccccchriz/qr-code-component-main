@@ -1,74 +1,72 @@
 :root {
-    --clr-neutral-100: hsl(0, 0%, 100%);
-    --clr-neutral-300: hsl(212, 45%, 89%);
-    --clr-neutral-500: hsl(220, 15%, 55%);
-    --clr-neutral-700: hsl(218, 44%, 22%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(212, 45%, 89%);
+  --clr-neutral-500: hsl(220, 15%, 55%);
+  --clr-neutral-700: hsl(218, 44%, 22%);
 
-    --ff-base: Outfit;
+  --ff-base: Outfit;
 
-    --fw-base: 400;
-    --fw-bold: 700;
+  --fw-base: 400;
+  --fw-bold: 700;
 }
 
 @font-face {
-    font-family: Outfit;
-    src: url('fonts/Outfit-VariableFont_wght.ttf');
+  font-family: Outfit;
+  src: url("fonts/Outfit-VariableFont_wght.ttf");
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 main {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--clr-neutral-300);
-
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-neutral-300);
 }
 
-.container {
-    background-color: var(--clr-neutral-100);
-    padding: 1rem;
-    margin: 1.4rem;
-    border-radius: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    max-width: 302px;
+.qr-code {
+  background-color: var(--clr-neutral-100);
+  padding: 1rem;
+  margin: 1.4rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 302px;
 }
 
-.qr_code {
-    border-radius: 2rem;
-    object-fit: contain;
-    overflow: hidden;
-    height: 300px;
-    width: 300px;
+.qr-code__img {
+  border-radius: 2rem;
+  object-fit: contain;
+  overflow: hidden;
+  height: 300px;
+  width: 300px;
 }
 
-
-.title {
-    font-family: var(--ff-base);
-    font-weight: var(--fw-bold);
-    font-size: 1.5rem;
-    text-align: center;
-    color: var(--clr-neutral-700);
-    margin: 0 0.8rem;
+.qr-code__title {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--clr-neutral-700);
+  margin: 0 0.8rem;
 }
 
-.text {
-    font-family: var(--ff-base);
-    font-weight: var(--fw-base);
-    font-size: 0.9375rem;
-    text-align: center;
-    color: var(--clr-neutral-500);
-    margin: 0 0.8rem;
-    margin-bottom: 1.5rem;
-
+.qr-code__text {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-base);
+  font-size: 0.9375rem;
+  text-align: center;
+  color: var(--clr-neutral-500);
+  margin: 0 0.8rem;
+  margin-bottom: 1.5rem;
 }
