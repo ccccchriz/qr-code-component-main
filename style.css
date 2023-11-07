@@ -1,18 +1,18 @@
+@font-face {
+  font-family: Outfit;
+  src: url("fonts/Outfit-VariableFont_wght.ttf");
+}
+
 :root {
-  --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-neutral-300: hsl(212, 45%, 89%);
-  --clr-neutral-500: hsl(220, 15%, 55%);
-  --clr-neutral-700: hsl(218, 44%, 22%);
+  --clr-neutral-100: 0, 0%, 100%;
+  --clr-neutral-300: 212, 45%, 89%;
+  --clr-neutral-500: 220, 15%, 55%;
+  --clr-neutral-700: 218, 44%, 22%;
 
   --ff-base: Outfit;
 
   --fw-base: 400;
   --fw-bold: 700;
-}
-
-@font-face {
-  font-family: Outfit;
-  src: url("fonts/Outfit-VariableFont_wght.ttf");
 }
 
 /*
@@ -70,58 +70,51 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-/*
-    8. Create a root stacking context
-  */
-#root,
-#__next {
-  isolation: isolate;
+
+body {
+  min-height: 100vh;
 }
 
 main {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--clr-neutral-300);
+  background-color: hsl(var(--clr-neutral-300));
 }
 
 .qr-code {
-  background-color: var(--clr-neutral-100);
+  max-width: 20rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-base);
+  text-align: center;
+  line-height: 1.3;
+  background-color: hsl(var(--clr-neutral-100));
+  border-radius: 1rem;
   padding: 1rem;
-  margin: 1.4rem;
-  border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  max-width: 302px;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  box-shadow: -1px -1px 37px -14px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: -1px -1px 37px -14px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: -1px -1px 37px -14px rgba(0, 0, 0, 0.33);
 }
 
 .qr-code__img {
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   object-fit: contain;
-  overflow: hidden;
-  height: 300px;
-  width: 300px;
 }
 
 .qr-code__title {
-  font-family: var(--ff-base);
   font-weight: var(--fw-bold);
-  font-size: 1.5rem;
-  text-align: center;
-  color: var(--clr-neutral-700);
-  margin: 0 0.8rem;
+  font-size: 1.3rem;
+  color: hsl(var(--clr-neutral-700));
+  padding: 0 0.7rem;
 }
 
 .qr-code__text {
-  font-family: var(--ff-base);
-  font-weight: var(--fw-base);
   font-size: 0.9375rem;
-  text-align: center;
-  color: var(--clr-neutral-500);
-  margin: 0 0.8rem;
-  margin-bottom: 1.5rem;
+  color: hsl(var(--clr-neutral-500));
+  padding: 0 0.7rem 1rem 0.7rem;
 }
